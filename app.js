@@ -6,7 +6,7 @@ const bodyparser = require("body-parser")
 mongoose.connect('mongodb://localhost/contactDance', {useNewUrlParser: true});
 const port = 8000;
 
-//Define mongoose schema
+//Define Mongoose schema
 
 const contactSchema = new mongoose.Schema({
     name: String,
@@ -42,7 +42,7 @@ app.post('/contact', (req, res)=>{
     myData.save().then(()=>{
         res.send("This item has been saved in the Database")
     }).catch(()=>{
-        res.status(400).send("Item was not saved to the Database")
+        res.status(400).send("This ttem was not saved to the Database")
     })
 })
 
